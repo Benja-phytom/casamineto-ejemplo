@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Boda Valeria & Sebastián | Invitación Formal</title>
+  
+  <!-- Tipografías de Alta Gama -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-outer: #141615;
+      --bg-card: #fcfbf9;
+      --gold: #b5914b;
+      --gold-dark: #8c6d30;
+      --charcoal: #1c1f1e;
+      --text-main: #262626;
+      --text-muted: #5e5e5e;
+      --border-subtle: #e3dccb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-outer);
+      color: var(--text-main);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    /* Contenedor optimizado formato móvil */
+    .mobile-shell {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--bg-card);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* PORTADA DE IMPACTO */
+    .hero {
+      position: relative;
+      height: 88vh;
+      min-height: 560px;
+      background: linear-gradient(to bottom, rgba(15, 17, 16, 0.45), rgba(15, 17, 16, 0.88)),
+                  url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 55px 24px 45px;
+      color: #ffffff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(181, 145, 75, 0.55);
+      pointer-events: none;
+    }
+
+    .hero-top {
+      z-index: 2;
+    }
+
+    .monogram {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      letter-spacing: 6px;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(181, 145, 75, 0.5);
+      padding-bottom: 8px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .hero-label {
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #e5dec9;
+    }
+
+    .hero-names {
+      z-index: 2;
+      margin: auto 0;
+    }
+
+    .hero-names h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.7rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .hero-names .amp {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 2.4rem;
+      color: var(--gold);
+      display: block;
+      margin: 4px 0;
+    }
+
+    .hero-bottom {
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-date {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      letter-spacing: 4px;
+      color: #ffffff;
+      border-top: 1px solid rgba(181, 145, 75, 0.6);
+      border-bottom: 1px solid rgba(181, 145, 75, 0.6);
+      padding: 10px 0;
+      margin-bottom: 10px;
+    }
+
+    .hero-place {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #d4cbb8;
+    }
+
+    /* SECCIONES */
+    .section {
+      padding: 48px 26px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .divider {
+      width: 45px;
+      height: 1px;
+      background-color: var(--gold);
+      margin: 0 auto 24px;
+    }
+
+    /* PADRES */
+    .blessing {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .parents-block {
+      margin-bottom: 22px;
+    }
+
+    .parents-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .parents-block h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 2.5px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .parents-block p {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    /* CRONÓMETRO */
+    .countdown-bg {
+      background-color: var(--charcoal);
+      color: #ffffff;
+    }
+
+    .countdown-bg .section-title {
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+    }
+
+    .timer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .timer-cell {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(181, 145, 75, 0.35);
+      padding: 14px 6px;
+    }
+
+    .timer-cell span {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .timer-cell small {
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 5px;
+    }
+
+    /* UBICACIONES */
+    .loc-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 28px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+    }
+
+    .loc-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .loc-icon {
+      font-size: 1.7rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .loc-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .loc-place {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    .loc-time {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      margin: 6px 0;
+      letter-spacing: 1px;
+    }
+
+    .loc-address {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .btn-map {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--gold);
+      color: var(--gold-dark);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.25s;
+    }
+
+    .btn-map:active, .btn-map:hover {
+      background: var(--gold);
+      color: #ffffff;
+    }
+
+    /* ITINERARIO */
+    .timeline {
+      text-align: left;
+      position: relative;
+      padding-left: 22px;
+      border-left: 1px solid var(--gold);
+      margin-left: 10px;
+    }
+
+    .t-item {
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .t-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .t-item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      background-color: var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .t-time {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--gold-dark);
+      letter-spacing: 1px;
+    }
+
+    .t-desc {
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    /* CÓDIGO DE VESTIMENTA */
+    .dress-badge {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--charcoal);
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      padding: 8px 20px;
+      margin-bottom: 25px;
+    }
+
+    .dress-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .dress-box {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 20px 12px;
+    }
+
+    .dress-box i {
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .dress-box h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+
+    .dress-box p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .dress-note {
+      background: #f4efe4;
+      padding: 14px;
+      font-size: 0.78rem;
+      color: var(--text-main);
+      border-left: 3px solid var(--gold);
+      text-align: left;
+    }
+
+    /* LLUVIA DE SOBRES */
+    .envelope-box {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 30px 22px;
+    }
+
+    .envelope-box i {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .envelope-box p {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .adults-tag {
+      margin-top: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+
+    /* CONFIRMACIÓN RSVP (WHATSAPP DIRECTO) */
+    .rsvp-footer {
+      background-color: var(--charcoal);
+      color: #ffffff;
+      padding: 50px 26px 60px;
+      text-align: center;
+    }
+
+    .rsvp-footer .section-title {
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .rsvp-sub {
+      font-size: 0.85rem;
+      color: #cccccc;
+      margin-bottom: 22px;
+    }
+
+    .passes-pill {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      padding: 8px 18px;
+      margin-bottom: 26px;
+      font-size: 0.82rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #f5ebd6;
+    }
+
+    .passes-pill strong {
+      color: var(--gold);
+      font-size: 0.95rem;
+    }
+
+    .rsvp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .rsvp-form input,
+    .rsvp-form select {
+      width: 100%;
+      padding: 14px;
+      background: #262a29;
+      border: 1px solid #3f4543;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.92rem;
+      border-radius: 0;
+      outline: none;
+    }
+
+    .rsvp-form input:focus,
+    .rsvp-form select:focus {
+      border-color: var(--gold);
+    }
+
+    .btn-whatsapp {
+      margin-top: 8px;
+      width: 100%;
+      padding: 16px;
+      background-color: var(--gold);
+      color: #ffffff;
+      border: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: 0.25s;
+    }
+
+    .btn-whatsapp:active {
+      background-color: var(--gold-dark);
+      transform: scale(0.99);
+    }
+
+    .footer-sign {
+      margin-top: 35px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #8c8c8c;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="mobile-shell">
+
+    <!-- 1. PORTADA -->
+    <header class="hero">
+      <div class="hero-top">
+        <div class="monogram">V &amp; S</div>
+        <p class="hero-label">Nuestra Boda</p>
+      </div>
+
+      <div class="hero-names">
+        <h1>Valeria</h1>
+        <span class="amp">&amp;</span>
+        <h1>Sebastián</h1>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-date">21 • NOVIEMBRE • 2026</div>
+        <p class="hero-place">San Miguel de Allende, Guanajuato</p>
+      </div>
+    </header>
+
+    <!-- 2. PADRES -->
+    <section class="section">
+      <p class="blessing">
+        "Con la bendición de Dios y el amor de nuestras familias, tenemos el honor de invitarles a celebrar nuestra unión matrimonial"
+      </p>
+      <div class="divider"></div>
+
+      <div class="parents-block">
+        <h3>Padres de la Novia</h3>
+        <p>Sr. Alejandro Mendoza Ortega</p>
+        <p>Sra. Elena Ríos de Mendoza</p>
+      </div>
+
+      <div class="parents-block">
+        <h3>Padres del Novio</h3>
+        <p>Sr. Ricardo Castellanos Vega</p>
+        <p>Sra. Gabriela Domínguez de Castellanos</p>
+      </div>
+    </section>
+
+    <!-- 3. CRONÓMETRO -->
+    <section class="section countdown-bg">
+      <h2 class="section-title">Cuenta Regresiva</h2>
+      <div class="timer-grid" id="countdown">
+        <div class="timer-cell">
+          <span id="days">00</span>
+          <small>Días</small>
+        </div>
+        <div class="timer-cell">
+          <span id="hours">00</span>
+          <small>Horas</small>
+        </div>
+        <div class="timer-cell">
+          <span id="minutes">00</span>
+          <small>Min</small>
+        </div>
+        <div class="timer-cell">
+          <span id="seconds">00</span>
+          <small>Seg</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. UBICACIONES REALES -->
+    <section class="section">
+      <h2 class="section-title">Ubicaciones</h2>
+      <div class="divider"></div>
+
+      <div class="loc-card">
+        <i class="fa-solid fa-church loc-icon"></i>
+        <h3>Ceremonia Religiosa</h3>
+        <p class="loc-place">Parroquia de San Miguel Arcángel</p>
+        <p class="loc-time">17:00 HRS (Puntual)</p>
+        <p class="loc-address">Principal S/N, Zona Centro, 37700 San Miguel de Allende, Gto.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Miguel+Arcangel+San+Miguel+de+Allende" target="_blank" class="btn-map">
+          <i class="fa-solid fa-location-dot"></i> Abrir Ubicación
+        </a>
+      </div>
+
+      <div class="loc-card">
+        <i class="fa-solid fa-champagne-glasses loc-icon"></i>
+        <h3>Recepción &amp; Banquete</h3>
+        <p class="loc-place">Instituto Allende (Patio Principal)</p>
+        <p class="loc-time">19:00 HRS</p>
+        <p class="loc-address">Ancha de San Antonio 20, Zona Centro, 37700 San Miguel de Allende, Gto.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Instituto+Allende+San+Miguel+de+Allende" target="_blank" class="btn-map">
+          <i class="fa-solid fa-location-dot"></i> Abrir Ubicación
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. ITINERARIO -->
+    <section class="section">
+      <h2 class="section-title">Itinerario</h2>
+      <div class="divider"></div>
+
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-time">17:00 HRS</div>
+          <div class="t-desc">Ceremonia Religiosa</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">18:15 HRS</div>
+          <div class="t-desc">Callejoneada tradicional con mariachi</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">19:00 HRS</div>
+          <div class="t-desc">Cóctel de bienvenida</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">20:30 HRS</div>
+          <div class="t-desc">Cena de gala (3 tiempos)</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">22:00 HRS</div>
+          <div class="t-desc">Primer baile de los esposos y brindis</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">01:00 HRS</div>
+          <div class="t-desc">Tornaboda</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CÓDIGO DE VESTIMENTA -->
+    <section class="section">
+      <h2 class="section-title">Código de Vestimenta</h2>
+      <div class="dress-badge">RIGUROSA ETIQUETA</div>
+
+      <div class="dress-row">
+        <div class="dress-box">
+          <i class="fa-solid fa-user-tie"></i>
+          <h4>Caballeros</h4>
+          <p>Smoking negro o traje oscuro formal con corbata o moño.</p>
+        </div>
+        <div class="dress-box">
+          <i class="fa-solid fa-person-dress"></i>
+          <h4>Damas</h4>
+          <p>Vestido largo de noche. Se recomienda tacón ancho por el empedrado.</p>
+        </div>
+      </div>
+
+      <div class="dress-note">
+        <strong>Nota:</strong> Reservamos el blanco, marfil y tonos crema exclusivamente para la novia, así como el verde esmeralda para las damas de honor.
+      </div>
+    </section>
+
+    <!-- 7. LLUVIA DE SOBRES -->
+    <section class="section">
+      <h2 class="section-title">Obsequio</h2>
+      <div class="divider"></div>
+
+      <div class="envelope-box">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <p>
+          Su presencia es nuestro mejor regalo. Si desean tener un detalle con nosotros, contaremos con <strong>Lluvia de Sobres</strong> el día del evento.
+        </p>
+      </div>
+
+      <p class="adults-tag"><i class="fa-solid fa-wine-glass"></i> Evento exclusivo para adultos</p>
+    </section>
+
+    <!-- 8. CONFIRMACIÓN RSVP CON HASTA 8 PASES Y WHATSAPP -->
+    <footer class="rsvp-footer">
+      <h2 class="section-title">Confirmación</h2>
+      <p class="rsvp-sub">Agradecemos confirmar su asistencia antes del 12 de noviembre</p>
+
+      <div class="passes-pill">
+        Pase familiar válido hasta por <strong>8 Lugares</strong>
+      </div>
+
+      <form id="whatsappRsvp" class="rsvp-form">
+        <div class="form-group">
+          <label for="guestName">Nombre Completo / Familia</label>
+          <input type="text" id="guestName" placeholder="Ej. Familia Ramírez" required>
+        </div>
+
+        <div class="form-group">
+          <label for="passesCount">Pases a Confirmar (Máximo 8)</label>
+          <select id="passesCount" required>
+            <option value="8 Pases">8 Pases</option>
+            <option value="7 Pases">7 Pases</option>
+            <option value="6 Pases">6 Pases</option>
+            <option value="5 Pases">5 Pases</option>
+            <option value="4 Pases">4 Pases</option>
+            <option value="3 Pases">3 Pases</option>
+            <option value="2 Pases">2 Pases</option>
+            <option value="1 Pase">1 Pase</option>
+            <option value="0 Pases (No podré asistir)">No podremos asistir</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Confirmar por WhatsApp
+        </button>
+      </form>
+
+      <p class="footer-sign">Valeria &amp; Sebastián</p>
+    </footer>
+
+  </main>
+
+  <script>
+    // 1. CRONÓMETRO EN TIEMPO REAL (21 Noviembre 2026, 17:00 hrs)
+    const targetDate = new Date("November 21, 2026 17:00:00").getTime();
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "<p style='grid-column: span 4; color: #b5914b; font-family: Cinzel, serif;'>¡HOY ES EL GRAN DÍA!</p>";
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+      document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+      document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+      document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+
+    // 2. ENVÍO DE CONFIRMACIÓN DIRECTO A WHATSAPP (2214110338)
+    document.getElementById("whatsappRsvp").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById("guestName").value.trim();
+      const passes = document.getElementById("passesCount").value;
+      const phone = "522214110338";
+
+      let message = "";
+      if (passes.startsWith("0")) {
+        message = `Hola, somos/soy *${name}*. Agradecemos mucho la invitación a la boda de Valeria & Sebastián, pero lamentablemente no podremos asistir.`;
+      } else {
+        message = `Hola, somos/soy *${name}*. Confirmamos nuestra asistencia a la boda de Valeria & Sebastián con *${passes}*. ¡Ahí nos vemos!`;
+      }
+
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank");
+    });
+  </script>
+
+</body>
+</html>
